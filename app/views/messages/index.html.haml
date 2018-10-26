@@ -1,9 +1,12 @@
 .notification
- .notce
-  %p グループを作成しました
+ %p.notification__message
+  チャットグループが作成されました
 
 .sidebar
  = render "sidebar"
 
- / .chatMain
- / = render "chat"
+.chat-main
+ = render "chat-main__header"
+ = render "chat-main__body"
+ = render "chat-main__footer"
+
