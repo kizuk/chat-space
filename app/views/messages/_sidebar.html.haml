@@ -1,12 +1,16 @@
-.sidebar
- .header
-  %p.header__name
-   kazuki
-  .header__list
+.user
+ .user__name
+  kazuki
+ .user__font
+  = link_to root_path,class: "user__font--link" do
    %i.fas.fa-edit
+  = link_to root_path, class: "user__font--link" do
    %i.fas.fa-cog
- .body
-  %ul.lists
-   = link_to root_path, class: "group-link" do
-    %li.group-name<test
-    %li.group-message<メッセージはありません
+
+.groups
+ .groups__list
+  = link_to root_path, class: "groups__link" do
+   .groups__name
+    aaaaaa
+   .groups__text
+    aaaaaa
