@@ -1,0 +1,31 @@
+.body {
+	height: calc(100vh-15%-90px);
+ &__messages-list {
+ 	padding-top: 46px;
+ 	padding-left: 40px;
+ }
+  &__messages {
+  	@include clearfix();
+  	padding-left: 40px;
+   &-name {
+   	color: $maintext-color;
+   	font-size: 16px;
+   	font-weight: bold;
+   	float: left;
+   	padding: 0 10px 10px 0;
+   	line-height: 10px;
+   }
+   &-time {
+   	color: #999;
+   	font-size: 12px;
+   	padding: 0 10px 0 10px;
+   	float: left;
+   	line-height: 10px;
+   }
+   &-text {
+   	font-size: 14px;
+   	color: $maintext-color;
+   	clear: both;
+   }
+  }
+}
