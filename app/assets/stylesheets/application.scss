@@ -1,17 +1,17 @@
 @import "./reset";
-@import "./clearfix";
+@import "mixin/clearfix";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import "./variable";
-@import "./notification";
-@import "./sidebar";
-@import "./sidebar__user";
-@import "./sidebar__groups";
-@import "./chat-main";
-@import "./chat-main__header";
-@import "./chat-main__body";
-@import "./chat-main__footer";
-@import "./footer__message";
+@import "config/variable";
+@import "modules/notification";
+@import "modules/sidebar";
+@import "modules/sidebar__user";
+@import "modules/sidebar__groups";
+@import "modules/chat-main";
+@import "modules/chat-main__header";
+@import "modules/chat-main__body";
+@import "modules/chat-main__footer";
+@import "modules/footer__message";
 
 
 
