@@ -1,0 +1,22 @@
+.user {
+   height: 8%;
+   background-color: #253141;
+   padding: 20px 20px 20px 20px;
+   line-height: 40px;
+
+  &__name {
+    color: $letter-color;
+    font-size: 20px;
+    font-weight: bold;
+    float: left;
+  }
+  &__font {
+    margin-left: 90px;
+    float: right;
+    &--link {
+  	  color: white;
+  	  text-decoration: none;
+    }
+  }
+}
+

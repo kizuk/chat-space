@@ -1,0 +1,36 @@
+.header {
+   @include clearfix();
+   border: 1px solid #eee;
+   padding: 0 40px 3px 40px;
+  &__button {
+    color: #38AEF0;
+  }
+  &__group {
+    margin: 0 40px;
+  }
+  &__group-name {
+    color: #333;
+    font-size: 20px;
+    margin: 25px 0 10px;
+    float: left;
+  }
+  &__group-edit-btn {
+    color: $button-color;
+    font-size: 15px;
+    padding: 12.5px 20px;
+    margin: 28px 0 0 0;
+    border: 1px solid $button-color;
+    float: right;
+  }
+
+ &__group-members {
+    color: #999;
+    font-size: 12px;
+    margin: 0 40px;
+    clear: both;
+    &-name {
+     display: inline;
+    }
+  }
+}
+
