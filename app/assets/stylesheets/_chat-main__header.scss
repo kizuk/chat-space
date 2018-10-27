@@ -1,7 +1,7 @@
 .header {
-   @include clearfix();
-   border: 1px solid #eee;
-   padding: 0 40px 3px 40px;
+  @include clearfix();
+  border: 1px solid #eee;
+  padding: 0 40px 3px 40px;
   &__button {
     color: #38AEF0;
   }
@@ -29,8 +29,8 @@
     margin: 0 40px;
     clear: both;
     &-name {
-     display: inline;
+    display: inline;
     }
-  }
+ }
 }
 

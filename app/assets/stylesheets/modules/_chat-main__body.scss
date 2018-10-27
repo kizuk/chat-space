@@ -1,9 +1,9 @@
 .body {
 	height: calc(100vh-15%-90px);
- &__messages-list {
- 	padding-top: 46px;
- 	padding-left: 40px;
- }
+  &__messages-list {
+ 	  padding-top: 46px;
+ 	  padding-left: 40px;
+  }
   &__messages {
   	@include clearfix();
   	padding-left: 40px;
