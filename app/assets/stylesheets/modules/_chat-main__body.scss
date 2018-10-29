@@ -8,7 +8,7 @@
   	@include clearfix();
   	padding-left: 40px;
    &-name {
-   	color: $maintext-color;
+   	color: $black;
    	font-size: 16px;
    	font-weight: bold;
    	float: left;
@@ -24,7 +24,7 @@
    }
    &-text {
    	font-size: 14px;
-   	color: $maintext-color;
+   	color: $black;
    	clear: both;
    }
   }

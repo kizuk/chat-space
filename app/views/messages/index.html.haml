@@ -1,12 +1,7 @@
-.notification
- %p.notification__message
-  チャットグループが作成されました
-
 .sidebar
- = render "sidebar"
+= render "shared/sidebar"
 
 .chat-main
- = render "chat-main__header"
- = render "chat-main__body"
- = render "chat-main__footer"
-
+ = render "messages/chat-main__header"
+ = render "messages/chat-main__body"
+ = render "messages/chat-main__footer"

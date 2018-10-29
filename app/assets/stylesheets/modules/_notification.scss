@@ -1,9 +1,13 @@
 .notification {
-	background-color: #38AEF0;
-	width: 100vw;
-	padding: 2px 0 2px 0;
-  &__message {
- 	color: white;
- 	text-align: center;
+  .notice {
+    background-color: $light_blue;
+    color: $white;
+    text-align: center;
+  }
+
+  .alert {
+    background-color: $alert_orange;
+    color: $white;
+    text-align: center;
   }
 }
