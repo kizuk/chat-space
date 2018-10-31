@@ -1,5 +1,6 @@
 .body {
-	height: calc(100vh-15%-90px);
+	height: 550px;
+  overflow: scroll;
   &__messages-list {
  	  padding-top: 46px;
  	  padding-left: 40px;
