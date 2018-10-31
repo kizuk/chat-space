@@ -5,8 +5,8 @@ $(function(){
     var url = $(this).attr('action')
     $.ajax({
       url: url,
-      type: formData
-      dataType: 'json'
+      type: formData,
+      dataType: 'json',
       processData: false,
       contentType: false
     })
