@@ -4,7 +4,7 @@ $(function(){
  	var html = `<div class="body__message-list">
                  <div class="body__messages">
                   <div class="body__messages-name">
-                   ${message.user.name}
+                   ${message.user_name}
                   </div>
                   <div class="body__message-time">
                    ${message.created_at}
@@ -26,7 +26,8 @@ $(function(){
     var url = $(this).attr('action')
     $.ajax({
       url: url,
-      type: formData,
+      type: "POST",
+      data: formData,
       dataType: 'json',
       processData: false,
       contentType: false

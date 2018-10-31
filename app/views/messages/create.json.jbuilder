@@ -1,4 +1,4 @@
-json.text      @message.text
+json.content      @message.content
 json.user_id   @message.user.id
 json.user_name @message.user.name
-json.image     @message.user.image
+json.image     @message.image
