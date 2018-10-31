@@ -1,7 +1,7 @@
 .sidebar
-= render "shared/sidebar"
+ = render "shared/sidebar"
 
 .chat-main
- = render "messages/chat-main__header"
- = render "messages/chat-main__body"
- = render "messages/chat-main__footer"
+ = render "chat-main__header"
+ = render @messages
+ = render "chat-main__footer"
