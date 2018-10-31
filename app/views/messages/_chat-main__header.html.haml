@@ -1,10 +1,10 @@
 .header
  .header__group
   .header__group-name
-   sampleグループ
+   = @group.name
   .header__group-edit-btn
    = link_to 'edit','/groups/1/edit', class: "header__button"
  .header__group-members
   MEMBER:
   .header__group-members-name
-   kazuki
+   = current_user.name

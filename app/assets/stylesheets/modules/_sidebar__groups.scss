@@ -2,10 +2,12 @@
 	background-color: #2f3e51;
   &__list {
  	  padding: 0 20px 0 20px;
- 	  &:hover {
- 		  background-color: #434a54;
- 		  text-decoration: none;
- 	  }
+    &__link {
+      text-decoration: none;
+      &:hover {
+      background-color: #434a54;
+      }
+    }
   }
   &__name {
   	padding: 20px 0 5px 0;
