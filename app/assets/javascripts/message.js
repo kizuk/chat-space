@@ -11,7 +11,8 @@ $(function(){
                   </div>
                   <div class="body__message-text">
                    <p class="body__message-text_content">
-                    ${message.content}
+                    if (${message.content.present})?
+                     ${message.content}
                    </p>
                    <img src="${message.image.url}" class="lower-message__image"
                   </div>
@@ -22,6 +23,7 @@ $(function(){
 
   $('.new_message').on('submit', function(e){
     e.preventDefault();
+    $(".message").animate({scrollTop: $(".message")[0].scrollHeight}, 'fast')
     var formData = new FormData(this);
     var url = $(this).attr('action')
     $.ajax({
@@ -33,9 +35,9 @@ $(function(){
       contentType: false
     })
     .done(function(data){
-      var html = buildHTML(data)
+      var html = buildHTML(data);
       $('.messages').append(html)
-      $('.message__input').val('')
+      $('.message__input').reset("");
     })
   })
 });
