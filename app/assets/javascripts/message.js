@@ -23,7 +23,7 @@ $(function(){
 
   $('.new_message').on('submit', function(e){
     e.preventDefault();
-    $(".message").animate({scrollTop: $(".message")[0].scrollHeight}, 'fast')
+    $(".body").animate({'scrollTop': $(".body")[0].scrollHeight}, 'fast');
     var formData = new FormData(this);
     var url = $(this).attr('action')
     $.ajax({
@@ -37,7 +37,10 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html)
-      $('.message__input').reset("");
+      $('.message__input').val("");
+    })
+    .fail(function(){
+    	alert('error');
     })
   })
 });
