@@ -26,21 +26,21 @@ $(function(){
     $(".body").animate({'scrollTop': $(".body")[0].scrollHeight}, 'fast');
     var formData = new FormData(this);
     var url = $(this).attr('action')
-    $.ajax({
+     $.ajax({
       url: url,
       type: "POST",
       data: formData,
       dataType: 'json',
       processData: false,
       contentType: false
-    })
-    .done(function(data){
+     })
+     .done(function(data){
       var html = buildHTML(data);
-      $('.messages').append(html)
-      $('.message__input').val("");
-    })
-    .fail(function(){
-    	alert('error');
-    })
+       $('.messages').append(html)
+       $('.message__input').val("");
+     })
+     .fail(function(){
+      alert('error');
+     })
   })
 });
