@@ -1,5 +1,5 @@
 .footer
- = form_for [@group, @message], class: 'message' do |f|
+ = form_for [@group, @message], class: 'message'  do |f|
   = f.text_field :content, class: 'message__input',placeholder: 'type a message'
   = f.label :image, class: 'message__i' do
    %i.far.fa-images
