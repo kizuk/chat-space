@@ -38,5 +38,8 @@ $(function() {
           appendNoUser('一致するユーザーはいませんでした');
       }
     })
+    .fail(function(){
+      alert('検索に失敗しました')
+    })
   });
 });
