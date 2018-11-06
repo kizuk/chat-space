@@ -47,22 +47,25 @@ $(function(){
       alert('error');
      })
   })
+
   var update = setInterval(function() {
     if (window.location.href.match(/\/groups\/\d+\/messages/)) {
+    var id = $(".body__messages-list:last").data('message-id');
     $.ajax({
       url: location.href,
       dataType: 'json'
     })
     .done(function(data) {
-      var id = $('.body__messages-list').data('messageId');
-      console.log(id)
       var makeHTML = '';
-      data.forEach(function(message) {
-        if (message.id > id ) {
-          makeHTML += buildHTML(message);
+      Object.keys(data).forEach(function(key) {
+        var new_message = data[key]
+        console.log(new_message)
+        var num = new_message.id
+        if (num > id ) {
+          makeHTML += buildHTML(new_message)
         }
+        $('.body').append(makeHTML);
       });
-      $('.body').prepend(makeHTML);
     })
     .fail(function(data) {
       alert('自動更新に失敗しました');
