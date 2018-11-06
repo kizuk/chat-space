@@ -1,9 +1,9 @@
-.body__messages-list
+.body__messages-list{"data-message-id": "#{message.id}"}
  .body__messages
   .body__messages-name
    = message.user.name
   .body__messages-time
-   = message.created_at.strftime('%F')
+   = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
   .body__messages-text
    - if message.content.present?
     %p.body__message-text__content
