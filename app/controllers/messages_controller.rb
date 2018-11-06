@@ -6,8 +6,8 @@ class MessagesController < ApplicationController
 	 @message = Message.new
 	 @messages = @group.messages.includes(:user)
 	 respond_to do |format|
+	    format.json
 	 	format.html
-	 	format.json
 	 end
 	end
 
