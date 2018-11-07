@@ -39,7 +39,6 @@ $(function(){
       contentType: false
      })
      .done(function(data){
-      console.log(data)
       var html = buildHTML(data);
        $('.body').append(html)
        $('.message__input').val("");
@@ -47,23 +46,26 @@ $(function(){
      .fail(function(){
       alert('error');
      })
+     .always(function(){
+      $(".message__send").prop('disabled', false);
+     })
   })
 
   var update = setInterval(function() {
     if (window.location.href.match(/\/groups\/\d+\/messages/)) {
-    var message_id = $(".body__messages-list:last").data('message-id');
+    var id = $(".body__messages-list:last").data('message-id');
     $.ajax({
       url: location.href,
-      dataType: 'json',
-      type: "GET",
-      data: {
-        message: { id: message_id}
-      },
+      dataType: 'json'
     })
     .done(function(data) {
       var makeHTML = '';
-      $.each(data, function(i, data) {
-      makeHTML += buildHTML(data);
+      Object.keys(data).forEach(function(key) {
+        var new_message = data[key]
+        var num = new_message.id
+        if (num > id ) {
+          makeHTML += buildHTML(new_message)
+        }
       });
       $('.body').append(makeHTML);
     })
