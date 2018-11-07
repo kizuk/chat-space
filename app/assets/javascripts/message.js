@@ -39,6 +39,7 @@ $(function(){
       contentType: false
      })
      .done(function(data){
+      console.log(data)
       var html = buildHTML(data);
        $('.body').append(html)
        $('.message__input').val("");
@@ -50,22 +51,22 @@ $(function(){
 
   var update = setInterval(function() {
     if (window.location.href.match(/\/groups\/\d+\/messages/)) {
-    var id = $(".body__messages-list:last").data('message-id');
+    var message_id = $(".body__messages-list:last").data('message-id');
     $.ajax({
       url: location.href,
-      dataType: 'json'
+      dataType: 'json',
+      type: "GET",
+      data: {
+        message: { id: message_id}
+      },
     })
     .done(function(data) {
+      console.log(data)
       var makeHTML = '';
-      Object.keys(data).forEach(function(key) {
-        var new_message = data[key]
-        console.log(new_message)
-        var num = new_message.id
-        if (num > id ) {
-          makeHTML += buildHTML(new_message)
-        }
-        $('.body').append(makeHTML);
+      $.each(data, function(i, data) {
+      makeHTML += buildHTML(data);
       });
+      $('.body').append(makeHTML);
     })
     .fail(function(data) {
       alert('自動更新に失敗しました');
