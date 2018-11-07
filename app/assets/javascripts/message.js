@@ -61,7 +61,6 @@ $(function(){
       },
     })
     .done(function(data) {
-      console.log(data)
       var makeHTML = '';
       $.each(data, function(i, data) {
       makeHTML += buildHTML(data);
