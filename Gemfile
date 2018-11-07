@@ -59,11 +59,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'haml-rails'
 gem 'erb2haml'
-gem 'font-awesome-sass', '~> 5.4.1'
 gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'sassc', '~> 1.12.1'
+
 
 group :production do
   gem 'unicorn'
