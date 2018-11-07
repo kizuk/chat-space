@@ -251,7 +251,7 @@ DEPENDENCIES
   erb2haml
   factory_girl_rails (~> 4.4.1)
   faker
-  font-awesome-sass
+  font-awesome-sass (~> 5.4.1)
   haml-rails
   jbuilder (~> 2.5)
   jquery-rails
