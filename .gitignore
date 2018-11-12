@@ -18,7 +18,6 @@
 
 public/uploads/*
 
-config/secrets.yml
-config/initilizers/devise.rb
 
-config/secrets.yml
+
+
